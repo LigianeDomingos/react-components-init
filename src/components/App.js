@@ -1,33 +1,23 @@
 import React from 'react';
+import Titulo from './Titulo';
+import DadosListagem from './DadosListagem';
+import AdicionarUsuario from './AdicionarUsuario';
+import CartoesUsuario from './CartoesUsuario';
+import Navbar from './Navbar';
 
 class App extends React.Component {
   render() {
     return (
       <div>
-        <nav className="green darken-4">
-          <div className="container">
-            <ul>
-              <li><a href="#">Página principal</a></li>
-              <li><a href="#">Página Interna 1</a></li>
-              <li><a href="#">Página Interna 2</a></li>
-              <li><a href="#">Página Interna 3</a></li>
-            </ul>
-          </div>
-        </nav>
+        <Navbar/>
+        
         <div className="container">
-          
-          <h2 className="title green-text text-darken-4"> Olá mundo! </h2>
+                    
+          <Titulo />
           
           <h3 className="title green-text"> Listagem de usuários </h3>
           <table>
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Cor Favorita</th>
-                <th>Comida Favorita</th>
-                <th>Github</th>
-              </tr>
-            </thead>
+            <DadosListagem/>
             <tbody>
               <tr>
                 <td>Ribery</td>
@@ -50,7 +40,8 @@ class App extends React.Component {
             </tbody>
           </table>
           
-          <h3 className="title green-text"> Cartões de usuários </h3>
+          <CartoesUsuario/>
+
           <div className="row">
             <div className="col s4">
               <div className="card hoverable">
@@ -99,7 +90,8 @@ class App extends React.Component {
             </div>
           </div>
 
-          <h3 className="title green-text"> Adicionar usuário </h3>
+          <AdicionarUsuario/>
+
           <form>
             <div className="input-field col s6">
               <input id="first_name" name="nome" type="text" className="validate" />
